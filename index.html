@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mealify</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <script src="js/all.min.js" defer></script>
+    <script src="js/index.js" defer></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body data-theme="light">
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h1><a href="#home">
+                            Mealfiy<span>.</span>
+                        </a></h1>
+                </div>
+                <div class="nav-links">
+
+                    <input type="checkbox" name="menu" id="menu" hidden>
+                    <ul>
+                        <label for="menu"><i class="fa-solid fa-xmark fa-xl"></i></label>
+                        <li><a href="#home" class="home-link">Home</a></li>
+                        <li><a href="#chefs" class="chefs-link">Chefs</a></li>
+                        <li><a href="#gallery" class="gallary-link">Gallery</a></li>
+                        <li><a href="#contact" class="contact-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="nav-icons">
+                    <input type="checkbox" onclick=switchTheme(event) name="lightDark" id="lightDark" hidden>
+                    <label for="lightDark"><i class="fa-solid fa-2xl fa-moon"></i></label>
+                    <label for="lightDark"><i class="fa-solid fa-2xl fa-sun"></i></label>
+                    <label for="menu"><i class="fa-solid fa-2xl fa-bars"></i></label>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    
+</body>
+
+</html>
