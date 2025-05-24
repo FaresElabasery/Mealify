@@ -4,23 +4,25 @@
     --gray-color: #7f7f90;
     --section-bg: #eeeeee;
     --section-bg-2: #fff;
-    --font-color: #111;
+    --font-color: #212529;
     --font-color-2: #4f4f5a;
     --font-color-normal: #111;
-
     --selection-bg: #D85454;
+    --background-image: url("../images/team-shape.svg");
+
 }
 
 [data-theme="dark"] {
     --main-color: #C17E1F;
     --btn-hover: #E61414;
-    --gray-color: #7f7f90;
-    --section-bg: #252525;
+    --gray-color: #9f9f9f;
+    --section-bg: #202020;
     --section-bg-2: #171717;
     --font-color: #fff;
     --font-color-2: #9f9f9f;
     --font-color-normal: #fff;
     --selection-bg: #C17E1F;
+    --background-image: url("../images/team-shape-dark.svg");
 }
 
 ::selection {
@@ -32,6 +34,16 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    font-size: 15px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+/* reusable components */
 .btn {
     border: none;
     outline: none;
@@ -76,7 +88,6 @@ ul {
 
 section {
     padding-block: 60px;
-    margin-block: 80px;
 }
 
 .container {
@@ -84,9 +95,26 @@ section {
     margin: 0 auto;
 }
 
-.max-w-600 {
-    max-width: 600px;
+.heading {
+    margin-bottom: 40px;
+    text-align: center;
 }
+
+.heading p {
+    color: var(--gray-color);
+    font-size: 14px;
+}
+
+.heading h2 {
+    color: var(--font-color);
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
 
 /* navbar */
 .navbar {
@@ -181,8 +209,9 @@ section {
     font-weight: 600;
     font-size: 17px;
 }
+
 .navbar .nav-links ul li a:hover {
-   color: var(--font-color);
+    color: var(--font-color);
 }
 
 .navbar .nav-links ul li a:after {
@@ -221,7 +250,7 @@ header {
     background-color: var(--section-bg);
     color: var(--font-color-normal);
     padding-block: 60px;
-    margin-block: 60px;
+    margin-top: 60px;
 }
 
 .header-content {
@@ -231,12 +260,9 @@ header {
     align-items: center;
 }
 
-.header-img {
-    width: 100%;
-}
+
 
 .header-img img {
-    width: 100%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 50%;
     background-color: #111;
@@ -356,6 +382,68 @@ header {
     z-index: 1;
 }
 
+/* chefs section */
+.chefs {
+    background-color: var(--section-bg-2);
+    text-align: center;
+    color: var(--gray-color);
+}
+
+.chef-cards {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--section-bg)-2;
+}
+
+.chefs .chef-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+.inner-layer {
+    padding: 20px;
+}
+
+.chefs .chef-card:hover {
+    transform: scale(1.1);
+}
+
+.chefs .chef-card .chef-img {
+    position: relative;
+}
+
+.chefs .chef-card .chef-img::after {
+    position: absolute;
+    content: "";
+    background-image:var(--background-image);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 20%;
+}
+
+.chefs .chef-info {
+    padding: 0px 12px 20px;
+}
+
+.chefs .chef-info h3 {
+    font-size: 19px;
+    color: var(--font-color-normal);
+}
+
+.chefs .chef-info p {
+    margin-block: 10px;
+}
+
+.chefs .chef-info p:last-child {
+    font-style: italic;
+}
+
 /* media */
 @media screen and (min-width:768px) {}
 
@@ -401,8 +489,6 @@ header {
     .navbar .nav-icons .fa-bars {
         display: none;
     }
-
-
 
 }
 
