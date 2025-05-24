@@ -403,6 +403,39 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
+.chefs .chef-card:hover .chef-social {
+    transform: translateX(0%);
+    transition: all 0.3s 0.4s ease-in-out;
+}
+
+
+.chefs .chef-social {
+    position: absolute;
+    top: 8%;
+    right: 3%;
+    height: 30%;
+    font-size: 18px;
+    width: 10%;
+    display: flex;
+    padding-block: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    transform: translateX(130%);
+    transition: all 0.2s 0.2s ease-in-out;
+}
+
+.chefs .chef-social a {
+    color: rgba(55, 55, 63, 0.3);
+
+}
+
+.chefs .chef-social a:hover {
+    color: rgba(55, 55, 63, 0.9);
+}
+
 .inner-layer {
     padding: 20px;
 }
@@ -418,7 +451,7 @@ header {
 .chefs .chef-card .chef-img::after {
     position: absolute;
     content: "";
-    background-image:var(--background-image);
+    background-image: var(--background-image);
     background-size: cover;
     background-position: center;
     width: 100%;
