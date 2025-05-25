@@ -14,7 +14,7 @@ Mealify is a responsive restaurant landing page that features a modern design, p
 │   ├── media.css           # Responsive design and media queries
 │   └── all.min.css         # Font Awesome icons
 ├── js/
-│   ├── index.js            # Handles dynamic content (chefs section) and theme switching
+│   ├── index.js            # Handles dynamic content (chefs and gallery sections) and theme switching
 │   └── all.min.js          # Font Awesome icons script
 ├── images/                 # All images (favicon, hero, chefs, gallery, etc.)
 ```
@@ -27,7 +27,7 @@ Mealify is a responsive restaurant landing page that features a modern design, p
 - **Theme Switcher:** Toggle between light and dark themes using a checkbox in the navbar.
 - **Header Section:** Hero image and call-to-action buttons.
 - **Chefs Section:** Dynamically generated chef cards using JavaScript.
-- **Gallery Section:** Grid of food images with overlay descriptions.
+- **Gallery Section:** Dynamically generated grid of food images with overlay descriptions using JavaScript.
 - **Contact Section:** Google Maps embed, contact info, and a contact form.
 - **Footer:** Logo, newsletter subscription, quick links, and contact details.
 
@@ -37,6 +37,9 @@ Mealify is a responsive restaurant landing page that features a modern design, p
 
 - **Dynamic Chefs Section:**  
   The chefs' data is stored in an array in `js/index.js`. On page load, the script generates HTML for each chef and injects it into the `#chef-cards` container.
+
+- **Dynamic Gallery Section:**  
+  The gallery images and descriptions are also generated dynamically from an array in `js/index.js` and rendered into the `#gallery-content` container.
 
 - **Theme Switching:**  
   The theme switcher toggles the `data-theme` attribute on the `<body>`, which changes CSS variables for light/dark mode.
@@ -49,7 +52,7 @@ Mealify is a responsive restaurant landing page that features a modern design, p
   Edit the `chefs` array in `js/index.js` to update the chefs section.
 
 - **Update Gallery:**  
-  Add or replace images in the `images/gallery` folder and update the HTML in the Gallery section of `index.html`.
+  Edit the gallery array in `js/index.js` to update the images and descriptions in the gallery section.
 
 - **Change Theme Colors:**  
   Modify CSS variables in `css/index.css` under `:root` and `[data-theme="dark"]`.
