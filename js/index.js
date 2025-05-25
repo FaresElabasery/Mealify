@@ -1,6 +1,6 @@
 const toggleSwitch = document.querySelector('body');
 const chefsContainer = document.getElementById('chef-cards');
-
+const gallaryContainer = document.getElementById('gallery-content');
 var chefs = [
     {
         name: "Walter White",
@@ -19,6 +19,50 @@ var chefs = [
         role: "Cook",
         img: "images/chefs/chefs-3.jpg",
         description: "Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptates enim aut architecto porro aspernatur molestiae modi."
+    }
+]
+var gallary = [
+    {
+        className: "pizza",
+        img: "images/gallery/meal-1.jpg",
+        title: "Pizza",
+        description: "Hawaiian pizza with ham and pineapple"
+    },
+    {
+        className: "steak",
+        img: "images/gallery/meal-2.jpg",
+        title: "Beef steaks",
+        description: "Tasty beef steaks flying above cast iron grate with fire flames."
+    },
+    {
+        className: "burger",
+        img: "images/gallery/meal-3.jpg",
+        title: "Burger",
+        description: "grass fed bison hamburger with chips & beer"
+    },
+    {
+        className: "battays",
+        img: "images/gallery/meal-4.jpg",
+        title: "Levitation pizza",
+        description: "Levitation pizza on black background."
+    },
+    {
+        className: "fira5",
+        img: "images/gallery/meal-5.jpg",
+        title: "Crispy Fried Chicken",
+        description: "Golden brown chicken legs with a crunchy coating and juicy meat"
+    },
+    {
+        className: "kabab",
+        img: "images/gallery/meal-6.jpg",
+        title: "Lyulya kebab",
+        description: "Golden brown chicken legs with a crunchy coating and juicy meat"
+    },
+    {
+        className: "fitera",
+        img: "images/gallery/meal-7.jpg",
+        title: "Frittata",
+        description: "Frittata or potato pie in a ceramic plate"
     }
 ]
 
@@ -62,6 +106,20 @@ for (let i = 0; i < chefs.length; i++) {
     chefsContainer.innerHTML = cartona;
 }
 
+let gallaryCartona = '';
+for (let i = 0; i < gallary.length; i++) {
+    gallaryCartona += `
+                <div class="gallery-img ${gallary[i].className}">
+                    <img src=${gallary[i].img} alt=${gallary[i].className}>
+                    <div class="overlay">
+                        <h3>${gallary[i].title}</h3>
+                        <p>${gallary[i].description}
+                        </p>
+                    </div>
+                </div>
+    `
+    gallaryContainer.innerHTML = gallaryCartona;
+}
 
 
 
